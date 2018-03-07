@@ -5,7 +5,11 @@ const Itinerary = require('../src/Itinerary.js');
 
 describe('Ship', () => {
   it('can be instantiated', () => {
-    expect(new Ship()).toBeInstanceOf(Object);
+    const port = new Port('Dover');
+    const itinerary = new Itinerary([port]);
+    const ship = new Ship(itinerary);
+
+    expect(ship).toBeInstanceOf(Object);
   });
 
   it('has a starting port', () => {
