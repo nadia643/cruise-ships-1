@@ -1,7 +1,5 @@
 /* globals describe it expect */
 const Port = require('../src/Port.js');
-const Ship = require('../src/Ship.js');
-const Itinerary = require('../src/Itinerary.js');
 
 describe('Port', () => {
   it('can be instantiated', () => {
@@ -10,8 +8,7 @@ describe('Port', () => {
 
   it('can add a ship', () => {
     const port = new Port('Dover');
-    const itinerary = new Itinerary([port]);
-    const ship = new Ship(itinerary);
+    const ship = {};
 
     port.addShip(ship);
 
@@ -20,9 +17,8 @@ describe('Port', () => {
 
   it('can remove a ship', () => {
     const port = new Port('Dover');
-    const itinerary = new Itinerary([port]);
-    const titanic = new Ship(itinerary);
-    const queenMary = new Ship(itinerary);
+    const titanic = {};
+    const queenMary = {};
 
     port.addShip(titanic);
     port.addShip(queenMary);
