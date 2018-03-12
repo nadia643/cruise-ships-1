@@ -1,4 +1,4 @@
-/* globals describe it expect */
+/* globals jest describe it expect */
 const Port = require('../src/Port.js');
 
 describe('Port', () => {
@@ -8,7 +8,7 @@ describe('Port', () => {
 
   it('can add a ship', () => {
     const port = new Port('Dover');
-    const ship = {};
+    const ship = jest.fn();
 
     port.addShip(ship);
 
@@ -17,8 +17,8 @@ describe('Port', () => {
 
   it('can remove a ship', () => {
     const port = new Port('Dover');
-    const titanic = {};
-    const queenMary = {};
+    const titanic = jest.fn();
+    const queenMary = jest.fn();
 
     port.addShip(titanic);
     port.addShip(queenMary);
