@@ -13,7 +13,9 @@ describe('Ship', () => {
         removeShip: jest.fn(),
         addShip: jest.fn(),
       };
-      const itinerary = new Itinerary([port]);
+      const itinerary = {
+        ports: [port],
+      };
       ship = new Ship(itinerary);
     });
 
