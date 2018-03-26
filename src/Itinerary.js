@@ -1,5 +1,12 @@
-function Itinerary(ports) {
-  this.ports = ports;
-}
+/* globals window */
+(function exportItinerary() {
+  function Itinerary(ports) {
+    this.ports = ports;
+  }
 
-module.exports = Itinerary;
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = Itinerary;
+  } else {
+    window.Itinerary = Itinerary;
+  }
+}());
