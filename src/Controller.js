@@ -1,4 +1,3 @@
-/* eslint-env browser */
 (function exportController() {
   function Controller(ship) {
     this.ship = ship;

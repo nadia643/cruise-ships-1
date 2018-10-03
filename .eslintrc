@@ -1,6 +1,6 @@
 {
-  "extends": "airbnb-base",
-  "rules": {
-    "wrap-iife": [2, "outside"]
+  "extends": "mcr-codes",
+  "env": {
+    "browser": true
   }
 }
