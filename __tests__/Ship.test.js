@@ -45,7 +45,7 @@ describe('Ship', () => {
       expect(dover.addShip).toHaveBeenCalledWith(ship);
     });
 
-    it.only('can\'t sail further than its itinerary', () => {
+    it('can\'t sail further than its itinerary', () => {
       ship.setSail();
       ship.dock();
 
@@ -69,6 +69,7 @@ describe('Ship', () => {
     };
     const ship = new Ship(itinerary);
 
+    ship.setSail();
     ship.dock();
 
     expect(ship.currentPort).toBe(calais);
