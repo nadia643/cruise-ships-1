@@ -1,5 +1,4 @@
-/* globals jest describe it expect */
-const Itinerary = require('../src/Itinerary.js');
+const Itinerary = require('../src/itinerary');
 
 describe('Itinerary', () => {
   it('can be instantiated', () => {

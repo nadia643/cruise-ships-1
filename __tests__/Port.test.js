@@ -1,5 +1,4 @@
-/* globals jest describe it expect */
-const Port = require('../src/Port.js');
+const Port = require('../src/port');
 
 describe('Port', () => {
   it('can be instantiated', () => {

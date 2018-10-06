@@ -1,6 +1,4 @@
-/* globals jest describe it expect beforeEach */
-const Ship = require('../src/Ship.js');
-const Itinerary = require('../src/Itinerary.js');
+const Ship = require('../src/ship');
 
 describe('Ship', () => {
   describe('with a port and itinerary', () => {
@@ -47,7 +45,7 @@ describe('Ship', () => {
       expect(dover.addShip).toHaveBeenCalledWith(ship);
     });
 
-    it('can\'t sail further than its itinerary', () => {
+    it.only('can\'t sail further than its itinerary', () => {
       ship.setSail();
       ship.dock();
 
@@ -66,7 +64,9 @@ describe('Ship', () => {
       removeShip: jest.fn(),
       addShip: jest.fn(),
     };
-    const itinerary = new Itinerary([dover, calais]);
+    const itinerary = {
+      ports: [dover, calais],
+    };
     const ship = new Ship(itinerary);
 
     ship.dock();
