@@ -69,6 +69,7 @@ describe('Ship', () => {
     const itinerary = new Itinerary([dover, calais]);
     const ship = new Ship(itinerary);
 
+    ship.setSail();
     ship.dock();
 
     expect(ship.currentPort).toBe(calais);

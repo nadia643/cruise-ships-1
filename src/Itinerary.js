@@ -1,4 +1,3 @@
-/* globals window */
 (function exportItinerary() {
   function Itinerary(ports) {
     this.ports = ports;

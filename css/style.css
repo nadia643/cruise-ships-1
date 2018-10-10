@@ -12,8 +12,14 @@ body {
 #viewport {
   width: 640px;
   height: 256px;
-  background-image: url('../images/water0.png');
   position: relative;
+}
+
+#sea {
+  width: 640px;
+  height: 256px;
+  position: relative;
+  background-image: url('../images/water0.png');
   overflow-x: auto;
 }
 
@@ -55,16 +61,21 @@ body {
   background-color: #d8040f;
   border-bottom-width: 0;
   padding-top: 14px;
+  outline: none;
 }
 
 #message {
-  padding: 16px;
+  padding: 16px 0;
   font-family: 'Press Start 2P', cursive;
   position: absolute;
   width: 100%;
   bottom: 0;
   border-top: 3px solid black;
   background-color: white;
+}
+
+#message-text {
+  margin: 0 16px;
 }
 
 #hud {
