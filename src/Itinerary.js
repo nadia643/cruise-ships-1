@@ -1,11 +1,11 @@
 (function exportItinerary() {
-  function Itinerary(ports) {
-    this.ports = ports;
+  function Itinerary(port) {
+    this.ports = port;
   }
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = Itinerary;
   } else {
-    window.Port = Itinerary;
+    window.Itinerary = Itinerary;
   }
 }());
