@@ -6,8 +6,8 @@
   Controller.prototype = {
     initialiseSea: function () {
       const backgrounds = [
-        './images/water0.png',
-        './images/water1.png',
+        '../images/cs-images\(1\)/water0.png',
+        '../images/cs-images\(1\)/water1.png',
       ];
 
       let backgroundCounter = 0;
@@ -15,7 +15,7 @@
       window.setInterval(() => {
         document.querySelector('#viewport').style.backgroundImage = `url('${backgrounds[backgroundCounter % backgrounds.length]}')`;
         backgroundCounter += 1;
-      }, 5000);
+      }, 500);
     },
 
     renderPorts: function (ports) {
