@@ -1,4 +1,4 @@
-const Ship = require('../src/ship');
+const Ship = require('../src/Ship');
 
 describe('Ship', () => {
   describe('with a port and itinerary', () => {
