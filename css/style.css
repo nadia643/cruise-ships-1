@@ -29,3 +29,11 @@ body {
     height: 32px;
     background-image: url('../images/cs-images\(1\)/port.png');
 }
+
+#ship {
+    width: 128px;
+    height: 64px;
+    background-image: url('../images/cs-images\(1\)/ship.png');
+    position: absolute;
+
+}

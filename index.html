@@ -15,10 +15,8 @@
 </head>
 <body>
     <div id = "viewport">
-        <div id = "ports">
-
-        </div>
-
+        <div id = "ports"> </div>
+        <div id = "ship"> </div>
     </div>
 
 <script src="./src/controller.js"></script>
@@ -31,18 +29,20 @@
             new Port('City of Nadia'),
             new Port('Le grande ville'),
             new Port('Coding central port'),
-
         ]);
-      </script>
+
+        const ship = new Ship(itinerary);
+        controller.renderShip(ship);
+
+</script>
 <script>
-      const controller = new Controller();
-      
-      controller.renderPorts(itinerary.ports)
-        </script>
+    const controller = new Controller();
+    controller.renderPorts(itinerary.ports)
+</script>
 
 <script>
-        const port = new Port();
-      </script>
+    const port = new Port();
+</script>
 
 
 </body>
