@@ -12,11 +12,15 @@
 
   <link rel ="Controller" href="src/controller.js">
 
+  <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
     <div id = "viewport">
+        <div id = "headup"> </div>
         <div id = "ports"> </div>
         <div id = "ship"> </div>
+        <button id = "sailbutton">Ahoy Matey!</button>
     </div>
 
 <script src="./src/controller.js"></script>
@@ -26,21 +30,17 @@
 <script>
         const itinerary = new Itinerary([
             new Port('Nadia-ville'),
-            new Port('City of Nadia'),
-            new Port('Le grande ville'),
-            new Port('Coding central port'),
+            new Port('Moscow'),
+            new Port('Pyongyang'),
+            new Port('"Down under"'),
         ]);
 
-        const ship = new Ship(itinerary);
-        controller.renderShip(ship);
-
-</script>
-<script>
-    const controller = new Controller();
+    const ship = new Ship(itinerary);   
+    const controller = new Controller(ship);
     controller.renderPorts(itinerary.ports)
-</script>
+    controller.renderShip(ship);
+    controller.renderHeadupMessage(`Current Port: ${ship.currentPort.name}`);
 
-<script>
     const port = new Port();
 </script>
 
